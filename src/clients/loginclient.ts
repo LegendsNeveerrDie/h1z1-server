@@ -38,21 +38,15 @@ interface LoginProtocol {
 }
 
 export class LoginClient extends EventEmitter {
-  _gameId: number;
-  _environment: string;
   _soeClient: SoeClient;
   _protocol: LoginProtocol;
   constructor(
-    gameId: number,
-    environment: string,
     serverAddress: string,
     serverPort: number,
     loginKey: string,
     localPort: number
   ) {
     super();
-    this._gameId = gameId;
-    this._environment = environment;
     this._soeClient = new SOEClient(
       loginProtocolName,
       serverAddress,

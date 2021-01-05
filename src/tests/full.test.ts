@@ -14,6 +14,6 @@ testSoloZoneServer.start()
 
 console.log("Solo Servers launched")
 
-const testLoginClient = new LoginClient(0,"","127.0.0.1",1115,Base64.toUint8Array("F70IaxuU8C/w7FPXY1ibXw=="),7544);
+const testLoginClient = new LoginClient("127.0.0.1",1115,Base64.toUint8Array("F70IaxuU8C/w7FPXY1ibXw=="),7544);
 
 testLoginClient.connect()
